@@ -9,11 +9,16 @@ int main() {
     
     printf("\n"); //delete later
     
-       
-    char c;
-    scanf("%c", &c);
-    c = c - 65;
-    printf("%d", (int)c);
+    char encryption[] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
+    char a = 'A';
+    char encA; // encryption of a
+    int index;
+    
+    // scanf("%c", &a);
+    // printf("c\n", a);
+    index =  ((a - 65) + 3)%26; /* Enx = (x + n)(mod26) where x = letter to be encrypted and n = key */
+    encA = encryption[index];
+    printf("The letter %c becomes %c.\n", a, encA);
     
   return 0;
 }
