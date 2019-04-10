@@ -18,7 +18,7 @@ int main() {
         
     scanf("%[^\n]s", encryption); //receives the word to encrypted from 'input'
     scanf("%d", &key); //receives the key to be used from 'input'
-    
+   
     for(index = 0; encryption[index] != '\0' ; index++) {
         a = encryption[index];
         if (a >= 'A' && a <= 'Z'){
@@ -38,6 +38,25 @@ int main() {
            
         }  
          
+   /* for(index = 0; encryption[index] != '\0'; index++) {
+        a = encryption[index];
+        if (a >= 'A' && a <= 'Z') {
+            a = (a - key);
+            if (a < 'A') {
+                a = a + 26;
+            }
+        }
+        else if(a >= 'a' && a <= 'z') {
+            a = (a - key);
+            if (a < 'a'){
+                a = a + 26;
+            }
+        }
+        printf("%c", a);
+    } */
+
+
+
 
  return 0;
 }
