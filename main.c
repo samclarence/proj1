@@ -12,40 +12,32 @@ int main() {
     
     char encryption[50];
     char a; //the current letter to be converted
-   // char encA; // encryption of a
     int index;
     int key;
         
-    // printf("Enter word to be encrypted and key: \n");
-    
-    scanf("%s", encryption); //receives the word to encrypted from 'input'
+        
+    scanf("%[^\n]s", encryption); //receives the word to encrypted from 'input'
     scanf("%d", &key); //receives the key to be used from 'input'
     
-   /* a = encryption[1];
-    printf("%c\n", a); */
-    
-            
     for(index = 0; encryption[index] != '\0' ; index++) {
         a = encryption[index];
         if (a >= 'A' && a <= 'Z'){
-            a =  (a + key);  //Enx = (x + n)(mod26) where x = letter to be encrypted and n = key 
+            a =  (a + key);  
+            if(a > 'Z'){
+                a = a - 26;
+            }
         }
 
         else if(a >= 'a' && a <= 'z') {
                 a = (a + key);
+            if (a > 'z') {
+                a = a - 26;
+            }
             }
             printf("%c", a);
-            
-//            printf("%d\n", index); 
-            
-            // printf("%c", a);
+           
         }  
-
-    
-        
-            
-        
-            
+         
 
  return 0;
 }
