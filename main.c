@@ -11,15 +11,16 @@ int main() {
     
     
     char encryption[50];
-    char a; //the current letter to be converted
+    char a; 
+    char b; 
     int index;
     int key;
+            
         
-        
-    scanf("%[^\n]s", encryption); //receives the word to encrypted from 'input'
-    scanf("%d", &key); //receives the key to be used from 'input'
+    scanf("%[^\n]s", encryption); //receives the phrase to be encrypted from 'input'
+    scanf("%d", &key); //receives the cipher key from 'input'
    
-    for(index = 0; encryption[index] != '\0' ; index++) {
+   /* ENCRYPTION CAESER for(index = 0; encryption[index] != '\0' ; index++) {
         a = encryption[index];
         if (a >= 'A' && a <= 'Z'){
             a =  (a + key);  
@@ -34,11 +35,11 @@ int main() {
                 a = a - 26;
             }
             }
-            printf("%c", a);
+            printf("%c", a);  
            
-        }  
+        }  */
          
-   /* for(index = 0; encryption[index] != '\0'; index++) {
+  /* DECRYPTION CAESER for(index = 0; encryption[index] != '\0'; index++) {
         a = encryption[index];
         if (a >= 'A' && a <= 'Z') {
             a = (a - key);
@@ -55,6 +56,22 @@ int main() {
         printf("%c", a);
     } */
 
+//substitution cipher
+char alphabet[26] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+char sub_key[26] = {'Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M'};
+
+
+
+for(index = 0 ; encryption[index] != '\0' ; index++ ) {
+    a = encryption[index] - 65;
+    b = sub_key[a];
+    printf("%c", b);
+    
+    
+    
+    
+    
+ }
 
 
 
