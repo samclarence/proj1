@@ -12,8 +12,11 @@ int main() {
     
     char encryption[50];
     int a; 
+    int n = 0;
+    int indexcount;
     char b; 
     char c;
+    char d;
     int index;
     int key;
             
@@ -58,15 +61,15 @@ int main() {
         printf("%c", a);
     } */
 
-//substitution cipher
-// char alphabet[26] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+//substitution cipher encryption
+   char alphabet[26] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
    char sub_key[26] =  {'Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M'};
 
 
 
- for(index = 0 ; encryption[index] != '\0' ; index++ ) {
+/* for(index = 0 ; encryption[index] != '\0' ; index++) {
     a = encryption[index] - 65;
-    if (a > 0 && a < 26.0) {
+    if (a >= 0 && a < 26.0) {
         b = sub_key[a];
         printf("%c", b);
         }
@@ -75,7 +78,28 @@ int main() {
         printf("%c", c);
         }
        
- } 
+ } */
+
+//substitution cipher decryption
+ for(index = 0 ; encryption[index] != '\0' ; index++) {
+    b = encryption[index];
+    // printf("%c ", b);
+    for(n = 0 ; sub_key[n] != b ; n++){
+        indexcount = n;
+    } if(n >= 0 && n <= 25){
+      c = alphabet[n];
+      printf("%c", c);
+  }
+      else if(n < 0 || n > 25){
+          c = encryption[index];
+          printf("%c", c);
+      }
+   }
+
+     
+    
+    
+ 
 
 
 
