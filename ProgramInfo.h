@@ -1,4 +1,4 @@
+#define option 4
 #define key 1
-#define option 3
-#define encryption "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+#define encryption "ABCDEFGHIJKLMNOPQRSTUVWXYZ123"
 #define sub_key "QWERTYUIOPASDFGHJKLZXCVBNM"
