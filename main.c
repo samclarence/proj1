@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> 
 #include "ProgramInfo.h" //the ProgramInfo header file is used to initiiliase the 'option', 'key', 'encryption' & 'sub_key' variables.
 
 /* The following program contains code which allows for the encryption and decryption of messages with a given key using a rotation cipher and also the 
@@ -11,7 +11,7 @@ encryption and decryption of substitution ciphers with a given key. */
    sub_key - the substitute alphabet to be used in substitution ciphers only.
  */
 
-int main() 
+int main()
 {
     
     int a; //an integer used in the manipulation of ASCII characters for rotation ciphers.
