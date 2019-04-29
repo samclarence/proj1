@@ -11,7 +11,7 @@ encryption and decryption of substitution ciphers with a given key. */
    sub_key - the substitute alphabet to be used in substitution ciphers only.
  */
 
-int main()
+int main() 
 {
     
     int a; //an integer used in the manipulation of ASCII characters for rotation ciphers.
