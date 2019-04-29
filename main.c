@@ -18,10 +18,10 @@ int main()
     char alphabet[26] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"}; //standard alphabet used for substitution cipher conversion.
     int n = 0; //used in the decryption of substitution ciphers to determine the element at which a character appears in an array.
     int index; //the current array element which is being tested and converted.
-    char b; //takes the value of the current array element being tested in a substitution cipher for teting and conversion if necessary.
+    char b; //takes the value of the current array element being tested in a substitution cipher for testing and conversion if necessary.
     
                  
-    printf("Please select an option by editing the header file:\n"); //prints an option menu to the screen which prompts the user to select a 
+    printf("Please select an option by editing the header file:\n"); //prints an option menu to the screen which prompts the user to select a task.
     printf("1) Encrypt a message using a rotation cipher and a given key.\n");
     printf("2) Decrypt a message using a rotation cipher and a given key.\n");
     printf("3) Encrypt a message using a substitution cipher and a given key.\n");
@@ -91,7 +91,7 @@ int main()
                   for(n = 0 ; sub_key[n] != b ; n++){ //determines the array element of the letter to be decrypted.
                   } 
                   if(n >= 0 && n < 26.0){
-                     b = alphabet[n]; //uses the array element calculated above which is stored in 'n' to print a value of the standard alphabet.
+                     b = alphabet[n]; //uses the array element calculated above which is stored in 'n' to print a value of the standard alphabet at that location.
                      printf("%c", b);
                   }
                   else if(n < 0 || n > 26.0){
